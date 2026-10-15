@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean-50: #dbeffe;
+  --color-ocean-100: #bfe3fe;
+  --color-ocean-200: #93d0fd;
+  --color-ocean-300: #60b4fa;
+  --color-ocean-400: #3b94f6;
+  --color-ocean-500: #2575eb;
+  --color-ocean-600: #1d5fd7;
+  --color-ocean-700: #1e4faf;
+  --color-ocean-800: #1e448a;
+  --color-ocean-900: #1a3a6e;
+
+  --color-aqua-300: #67e8f9;
+  --color-aqua-400: #22d3ee;
+  --color-aqua-500: #06b6d4;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-fade-in-up: fade-in-up 0.4s ease-out;
+  --animate-slide-in-right: slide-in-right 0.35s ease-out;
+  --animate-slide-in-left: slide-in-left 0.35s ease-out;
+  --animate-call-pulse: call-pulse 2s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes call-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(29, 95, 215, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(29, 95, 215, 0);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+}
